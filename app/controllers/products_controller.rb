@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    respond_with(@products)
+     respond_with(@products)
   end
 
   def show
