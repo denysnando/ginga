@@ -31,3 +31,4 @@ pickle-email-*.html
 .project
 dump.rdb
 latest.dump
+database.yml
