@@ -9,9 +9,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'devise'
-gem 'simple_form'
+
 gem 'bootstrap-sass', '~> 3.1.1.0'
+gem 'simple_form'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
