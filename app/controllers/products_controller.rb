@@ -14,10 +14,11 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    respond_with(@product)
+    @categories = Category.all
   end
 
   def edit
+    @categories = Category.all
   end
 
   def create
@@ -52,6 +53,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:name, :description, :number_references)
+      params.require(:product).permit(:name, :description, :number_references, :category_id)
     end
 end

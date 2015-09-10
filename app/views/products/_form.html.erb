@@ -24,6 +24,9 @@
     <span class="input-group-addon">Registro</span>
       <%= f.input_field :number_references, class: "form-control" %>
     <% end %>
+
+    <%= f.association :category, collection: @categories, priority: @product.category %>
+
     <hr>
 
   </div>

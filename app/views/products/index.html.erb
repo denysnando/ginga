@@ -17,6 +17,7 @@
       <th>Nome</th>
       <th>Descrição</th>
       <th>Número de Referência</th>
+      <th>Categoria</th>
       <th style="width: 30px;">Editar</th>
     </tr>
   </thead>
@@ -28,6 +29,7 @@
         <td><%=link_to p.name, product_path(p) %></td>
         <td><%=link_to p.description, product_path(p) %></td>
         <td><%=link_to p.number_references, product_path(p) %></td>
+        <td><%=link_to p.category.name, product_path(p) if p.category.present? %></td>
         <td><%=link_to 'Editar', edit_product_path(p) %></td>
       </tr>
     <% end %>
