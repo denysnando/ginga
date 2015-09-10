@@ -25,16 +25,16 @@
   <tbody>
     <% @products.each do |p| %>
       <tr>
-        <td><%=link_to p.id, product_path(p) %></td>
-        <td><%=link_to p.name, product_path(p) %></td>
-        <td><%=link_to p.description, product_path(p) %></td>
-        <td><%=link_to p.number_references, product_path(p) %></td>
-        <td><%=link_to p.category.name, product_path(p) if p.category.present? %></td>
-        <td><%=link_to 'Editar', edit_product_path(p) %></td>
+        <td><%=link_to p.id, admin_product_path(p) %></td>
+        <td><%=link_to p.name, admin_product_path(p) %></td>
+        <td><%=link_to p.description, admin_product_path(p) %></td>
+        <td><%=link_to p.number_references, admin_product_path(p) %></td>
+        <td><%=link_to p.category.name, admin_product_path(p) if p.category.present? %></td>
+        <td><%=link_to 'Editar', edit_admin_product_path(p) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-  <%= link_to 'Cadastrar Novo Produto', new_product_path, :class => 'btn btn-primary'  %>
+  <%= link_to 'Cadastrar Novo Produto', new_admin_product_path, :class => 'btn btn-primary'  %>

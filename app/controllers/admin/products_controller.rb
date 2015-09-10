@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class Admin::ProductsController < Admin::ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -25,9 +25,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
       if @product.save
         flash[:notice] = 'Produdo criado com sucesso!'
-        redirect_to products_path
+        redirect_to admin_products_path
       else
-        redirect_to new_product_path
+        redirect_to new_admin_product_path
       end
   end
 
@@ -36,15 +36,14 @@ class ProductsController < ApplicationController
     @product.update_attributes(product_params)
       if @product.save
         flash[:notice] = 'Produto editado com sucesso!'
-        redirect_to products_path
+        redirect_to admin_products_path
       else
-        redirect_to edit_product_path(@product)
+        redirect_to edit_admin_product_path(@product)
       end
   end
 
   def destroy
     @product.destroy
-    respond_with(@product)
   end
 
   private

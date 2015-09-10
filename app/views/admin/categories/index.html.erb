@@ -24,7 +24,7 @@
       <tr>
         <td><%= c.id %></td>
         <td><%= c.name %></td>
-        <td><%=link_to 'Editar', edit_category_path(c) %></td>
+        <td><%=link_to 'Editar', edit_admin_category_path(c) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +32,5 @@
 
 <br>
 <div class="btn-group">
-  <%= link_to 'Cadastrar Nova Categoria', new_category_path, class: 'btn btn-primary'  %>
+  <%= link_to 'Cadastrar Nova Categoria', new_admin_category_path, class: 'btn btn-primary'  %>
 </div>

@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class Admin::CategoriesController < Admin::ApplicationController
   before_action :set_category, only: [:edit, :update, :destroy]
 
   def index
@@ -16,9 +16,9 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
       if @category.save
         flash[:notice] = 'Categoria criada com sucesso!'
-        redirect_to categories_path
+        redirect_to admin_categories_path
       else
-        redirect_to new_category_path
+        redirect_to new_admin_category_path
       end
   end
 
@@ -27,9 +27,9 @@ class CategoriesController < ApplicationController
     @category.update_attributes(category_params)
       if @category.save
         flash[:notice] = 'Categoria editada com sucesso!'
-        redirect_to categories_path
+        redirect_to admin_categories_path
       else
-        redirect_to edit_category_path(@category)
+        redirect_to edit_admin_category_path(@category)
       end
   end
 

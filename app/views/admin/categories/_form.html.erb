@@ -1,4 +1,4 @@
-<%= simple_form_for(@category, wrapper: :horizontal_input_group,
+<%= simple_form_for([:admin, @category], wrapper: :horizontal_input_group,
         wrapper_mappings: {
           check_boxes: :horizontal_radio_and_checkboxes
         }) do |f| %>
@@ -17,7 +17,7 @@
   </div>
 
   <div class="btn-group">
-    <%= link_to 'Cancelar', categories_path, class: 'btn btn-default' %>
+    <%= link_to 'Cancelar', admin_categories_path, class: 'btn btn-default' %>
     <%= f.button :submit, 'Salvar Categoria', class: 'btn btn-primary' %>
   </div>
 <% end %>
