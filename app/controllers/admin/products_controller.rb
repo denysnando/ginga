@@ -1,11 +1,8 @@
 class Admin::ProductsController < Admin::ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
-
   def index
     @products = Product.all
-     respond_with(@products)
   end
 
   def show
