@@ -21,3 +21,5 @@ end
 
 # Use unicorn as the app server
  gem 'unicorn'
+ gem "slim"
+ gem "slim-rails", :require => false
