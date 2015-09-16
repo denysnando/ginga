@@ -15,6 +15,7 @@
     <tr>
       <th>Código</th>
       <th>Nome</th>
+      <th>Tipo de Categoria</th>
       <th style="width: 30px;">Editar</th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
       <tr>
         <td><%= c.id %></td>
         <td><%= c.name %></td>
+        <td><%= c.kind_category %></td>
         <td><%=link_to 'Editar', edit_admin_category_path(c) %></td>
       </tr>
     <% end %>

@@ -16,6 +16,11 @@
     <% end %>
   </div>
 
+   <%= f.select :kind_category, ['Masculino', 'Feminino'] %>
+
+ <br/>
+ <br/>
+
   <div class="btn-group">
     <%= link_to 'Cancelar', admin_categories_path, class: 'btn btn-default' %>
     <%= f.button :submit, 'Salvar Categoria', class: 'btn btn-primary' %>
